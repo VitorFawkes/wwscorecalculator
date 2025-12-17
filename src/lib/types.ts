@@ -54,8 +54,9 @@ export const DEFAULT_THRESHOLDS: ThresholdRule[] = [
 export const DEFAULT_CONFIG: AppConfig = {
   cutoffScore: 30,
   activeCampaign: {
-    baseUrl: '',
-    apiToken: '',
-    dealField: 'Lead Score 2',
+    baseUrl: process.env.NEXT_PUBLIC_AC_BASE_URL || '',
+    apiToken: process.env.NEXT_PUBLIC_AC_API_TOKEN || '',
+    dealField: process.env.NEXT_PUBLIC_AC_DEAL_FIELD || 'Lead Score 2',
+    customFieldId: process.env.NEXT_PUBLIC_AC_CUSTOM_FIELD_ID || '',
   },
 };
